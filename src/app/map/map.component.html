@@ -1,7 +1,9 @@
-<!-- map.component.html -->
 <google-map 
   [center]="center" 
   [zoom]="zoom"
-  height="400px"
-  width="800px">
+  height="600px"
+  width="100%"
+  (mapClick)="onMapClick($event)">
 </google-map>
+
+<label>{{ airQualityInfo }}</label>

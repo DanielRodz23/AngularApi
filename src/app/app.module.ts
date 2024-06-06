@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { MapComponent } from './map/map.component';
+import { importProvidersFrom } from '@angular/core';
+import { HttpClient, provideHttpClient } from '@angular/common/http';
 
 // @NgModule({
 //   declarations: [
@@ -29,7 +31,9 @@ import { MapComponent } from './map/map.component';
     AppRoutingModule,
     GoogleMapsModule
   ],
-  providers: [],
+  providers: [
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
